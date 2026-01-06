@@ -8,12 +8,14 @@ load_dotenv()
 token_api = os.getenv("TOKEN_KEY")
 
 conn = psycopg2.connect(
-    dbname=os.getenv("DB_NAME"),
-    host=os.getenv("DB_HOST"),
-    user=os.getenv("DB_USER"),
-    password=os.getenv("DB_PASSWORD"),
-    port=os.getenv("DB_PORT"),
+    dbname="manasbottel_8560",
+    user="manasbottel_8560",
+    password="2tGS3FLBvnNTAma6Oms28gTw6_mN25pHkvKf1MofyM4OSEjzoDSREWKrrUwwFC3y",
+    host="manasbottel-8560.postgresql.c.osc-fr1.scalingo-dbs.com",
+    port="34990",
+    sslmode="require",
 )
+
 conn.autocommit = True
 
 cursor = conn.cursor()
